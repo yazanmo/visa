@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.parent {
+  margin: 0 auto;
+  width: 100%;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #fff8f0 100%);
+  border-radius: 5px;
+  min-height: 500px;
+}
+
+.parent .child {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  padding: 80px 0 55px 0;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.parent .child .container {
+  height: 80%;
+  position: relative;
+  right: -30px;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.container {
+  display: grid;
+  width: 150vw;
+}
+
+.img{
+    position: relative;
+    bottom: 200px;
+}
+
+input {
+  font-size: 2rem;
+  outline: none;
+  transition: 0.3s ease-in;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+#credit-card {
+  font-size: 1rem;
+  color: #fff;
+  width: 400px;
+  height: 250px;
+  perspective: 40rem;
+  border-radius: 10px;
+  margin-left: 7.3rem;
+}
+
+
+
+.form-group {
+  display: grid;
+  grid-template-columns: 120px 120px 50px 120px;
+  grid-template-areas:
+    "cardNoLabel          cardNoInput          cardNoInput     cardNoInput"
+    "cardNameLabel        cardNameInput        cardNameInput   cardNameInput"
+    "cardExpiryLabel      cardExpiryInput      cardCvvLabel    cardCvvInput";
+  grid-gap: 30px;
+}
+
+.form-group > * {
+  padding: 15px 12px;
+  font-size: 0.9rem;
+  color: #211c1d;
+}
+
+#card_no_input {
+  grid-area: cardNoInput;
+}
+#card_name_input {
+  grid-area: cardNameInput;
+}
